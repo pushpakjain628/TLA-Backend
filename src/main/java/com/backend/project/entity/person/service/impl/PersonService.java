@@ -1,9 +1,9 @@
-package com.backend.project.entity.service.impl;
+package com.backend.project.entity.person.service.impl;
 
-import com.backend.project.entity.exception.ResourceNotFoundException;
-import com.backend.project.entity.model.Person;
-import com.backend.project.entity.repository.IPersonRepository;
-import com.backend.project.entity.service.IPersonService;
+import com.backend.project.entity.person.exception.ResourceNotFoundException;
+import com.backend.project.entity.person.model.Person;
+import com.backend.project.entity.person.repository.IPersonRepository;
+import com.backend.project.entity.person.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

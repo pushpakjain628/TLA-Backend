@@ -1,4 +1,4 @@
-package com.backend.project.entity.exception;
+package com.backend.project.entity.person.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

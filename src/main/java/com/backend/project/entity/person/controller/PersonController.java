@@ -1,7 +1,8 @@
-package com.backend.project.entity.controller;
+package com.backend.project.entity.person.controller;
 
-import com.backend.project.entity.model.Person;
-import com.backend.project.entity.service.IPersonService;
+import com.backend.project.entity.person.model.Person;
+import com.backend.project.entity.person.model.PersonConstants;
+import com.backend.project.entity.person.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/persons")
+@RequestMapping(PersonConstants.PERSON_API_ENDPOINT)
 @Validated
 public class PersonController {
 
@@ -17,7 +18,7 @@ public class PersonController {
     private IPersonService personService;
 
     @GetMapping
-    public List<Person> getListOfPersons(){
+    public List<Person> getListOfPersons() {
         return personService.getAllPersons();
     }
 
@@ -30,13 +31,4 @@ public class PersonController {
     public Person savePerson(@RequestBody Person person) {
         return personService.savePerson(person);
     }
-
-
-
-
-
-
-
-
-
 }

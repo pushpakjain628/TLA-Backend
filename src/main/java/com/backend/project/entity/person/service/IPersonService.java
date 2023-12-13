@@ -1,6 +1,6 @@
-package com.backend.project.entity.service;
+package com.backend.project.entity.person.service;
 
-import com.backend.project.entity.model.Person;
+import com.backend.project.entity.person.model.Person;
 
 import java.util.List;
 
