@@ -1,6 +1,6 @@
-package com.backend.project.entity.repository;
+package com.backend.project.entity.person.repository;
 
-import com.backend.project.entity.model.Person;
+import com.backend.project.entity.person.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
