@@ -4,6 +4,8 @@ import com.backend.project.entity.person.model.Person;
 import com.backend.project.entity.person.model.PersonConstants;
 import com.backend.project.entity.person.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +20,7 @@ public class PersonController {
     private IPersonService personService;
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public List<Person> getListOfPersons() {
         return personService.getAllPersons();
     }
